@@ -1,0 +1,5 @@
+/.metadata/
+*.class
+Test2/.settings/org.eclipse.jdt.core.prefs
+Test2/.project
+Test2/.classpath
