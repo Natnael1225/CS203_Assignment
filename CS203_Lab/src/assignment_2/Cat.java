@@ -1,6 +1,5 @@
 package assignment_2;
 
-
 /**
  * All is valid in this class
  * @author lwamt
@@ -18,8 +17,10 @@ package assignment_2;
 		this.weight= weight;
 		
 	}
-	
-	
+	public String name() {
+		return name;
+	}
+		
 	public Breed  getBreed() {
 		return breed;
 	}
@@ -27,26 +28,5 @@ package assignment_2;
 		return weight;
 	}
 	
-	class Breed{
-		private  String name;
-		private  double averageWgt;
-		
-		
-		public Breed(String name, double averageWgt) {
-			this.name = name;
-			this.averageWgt = averageWgt;
-		}
-
-		public String getName() {
-			return name;
-		}
-		
-		public double getAverageWgt() {
-			return averageWgt;
-		}
-		
-		
-		
-	}
 
 }
