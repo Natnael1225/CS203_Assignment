@@ -11,7 +11,7 @@ public class Q2Main {
     System.out.println(myCat.getWeight()); //Out-put -> 9.5
     System.out.println(myCat.getBreed().getWeight());//Out-put -> 10.5
 	
-	System.out.println(myCat.toString());
+	System.out.println(myCat);// This one gives memory address
 	}
 
 }
