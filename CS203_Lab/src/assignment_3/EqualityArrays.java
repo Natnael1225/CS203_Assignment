@@ -4,13 +4,28 @@ import java.util.Arrays;
 
 public class EqualityArrays {
 
+	public static boolean equalArrays(int[] arr, int[] arr2) {
+		if(arr==arr2) {
+			return true;
+		}
+		if(arr.length != arr2.length) {
+			return false;
+		}
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i] !=arr2[i])
+				return false;
+		}
+	
+		return true;
+	}
 	public static void main(String[] args) {
 		// TO check the two arrays are equal
 
 		int[] arr1 = { 1, 3, 5, 6, 6, 7 };
-		int[] arr2 = { 1, 3, 5, 9, 6, 7 };
+		int[] arr2 = { 1, 2, 5, 6, 6 ,7 };
 		int[] arr3 = { 1, 3, 5,  7 };
-		
+		boolean ans = equalArrays(arr1,arr2);
+		System.out.println(ans);
 		
 		boolean isEqual = true;
 		

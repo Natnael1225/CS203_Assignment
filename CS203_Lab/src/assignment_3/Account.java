@@ -2,7 +2,7 @@ package assignment_3;
 
 public class Account {
 
-	 
+	
 	/**
 	 * We can't allowed to set the size in the
 	 *  first square bracket, so line 1….[25] should be changed by [ ] , 
@@ -14,15 +14,11 @@ public class Account {
 	 * @param number
 	 * @return
 	 */
- public  static void searchAccount( int[] number ) {
-		number = new int[5];
-		for (int i = 0; i < number.length; i++ )
-		number[i] = number[i-1] + number[i+1]; 
-		System.out.println(number);
-
-}
- public static void main(String[] args) {
-	 int arr[] = {1,3,4,5,3};
-	 searchAccount(arr);
-}
+// public int searchAccount( int[25] number ) {
+//		number = new int[15];
+//		for (int i = 0; i < number.length; i++ )
+//		number[i] = number[i-1] + number[i+1]; 
+//		return number;
+//
+//}
 }
