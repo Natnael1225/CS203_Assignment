@@ -3,7 +3,7 @@ package midtermProject_CS203_2;
 public class Recipe  implements Cloneable{
 	
 	private String recipeName;
-	private String ingredents;  // This consists d/t ingredents ... may be Array
+	private String ingredents;  
 	private String instructions;
 	private int preTime;
 	private int cookTime;
@@ -12,9 +12,9 @@ public class Recipe  implements Cloneable{
 	
 	public Recipe() {
 
-		this.recipeName = "Pecan Pie";//"Shiro recipe";
-		this.ingredents =  "Pecan , Flour, Water" ;//"Onion, Tomato, oil, Garlic, Water,ChickPeaPowder, jalapeno";
-		this.instructions = " Pour Water on the top of the flour. Mix throughly. Add Pecans. Bake for 30 min.";//"Saute the onion, tomato, garlic with oil for 5 min then add the ChickPeaPowder";
+		this.recipeName = "Pecan Pie";
+		this.ingredents =  "Pecan , Flour, Water";
+		this.instructions = " Pour Water on the top of the flour. Mix throughly. Add Pecans. Bake for 30 min.";
 		this.preTime = 15; 
 		this.cookTime = 30;
 		this.servings = 4;
@@ -77,11 +77,14 @@ public class Recipe  implements Cloneable{
 	public void setServings(int servings) {
 		this.servings = servings;
 	}
+	
+	
 
-	@Override    // we need to do some thing
+	@Override    
 	protected Object clone() throws CloneNotSupportedException {
 		
-		return super.clone();  ///// we need to implement
+		Recipe cloned = (Recipe) super.clone();
+		return cloned;  
 	}
 
 

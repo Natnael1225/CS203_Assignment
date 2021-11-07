@@ -5,9 +5,11 @@ public interface Shape {
 	public double area();
 	
 	
-//	static void add() {
-//		
-//	}
+	//public default void add() {
+		
+	//}
+		
+	
 //	
 	
 	

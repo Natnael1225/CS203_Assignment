@@ -8,7 +8,8 @@ public class CookingVideo  extends Video implements  CookingVideos{
 	
 	public  CookingVideo() {
 		super();
-		this.recipe = new Recipe();//  check this default for class Recipe !!!!!!
+		this.recipe = new Recipe("Banana Chocolate","bread, egg, milk, cocoa powder, Water,banana, chocolate chip",
+				"Combine all ingredients in a microwaveable mug.Cook for 2-3 minutes.",3,8,68 );
 	}
 
 	public CookingVideo(Recipe recipe, String title, double durationInMinutes, int views, int likes, double watchTime) {
@@ -24,26 +25,50 @@ public class CookingVideo  extends Video implements  CookingVideos{
 		this.recipe = recipe;
 	}
 
+	// list the ingredients as string separate by comma's and return as String Array
 	@Override
 	public String[] getIngredientsList() {
-		String[] ingredentsList = recipe.getIngredents().split(",");	     // we need to implement some thing inside
-		return ingredentsList;  // list the ingredents as string change by comas as String Array
+		String[] ingredentsList = recipe.getIngredents().split(",");	 
+		return ingredentsList;  
 	}
 
 	@Override
-	public Recipe getCookingRecipe() {// what are the things to check here
+	public Recipe getCookingRecipe() {
 		
 		return getRecipe();
 	}
 
 	@Override
-	public void printRecipe() {  // Check with this implemention may be get address or for loop
-		System.out.println("Dish: "+ recipe.getRecipeName()+ " \nIngredents: "+ Arrays.toString(getIngredientsList())+ "\n Direction: "+
+	public String printRecipe() {  // Check with this implemention may be get address or for loop
+		return "Dish: "+ recipe.getRecipeName()+ " \nIngredents: "+ Arrays.toString(getIngredientsList())+ "\nDirection: "+
 	recipe.getInstructions() + " Prep Time: "+ recipe.getPreTime()+" Cooking Time: "+ recipe.getCookTime()+ 
-	"Serving Size: "+ recipe.getServings());
+	" Serving Size: "+ recipe.getServings();
 		
 	
 	}
+	@Override
+	public String toString() {
+		return  "Dish: "+ recipe.getRecipeName()+ " \nIngredents:"+ printIngredents(getIngredientsList())+ "Direction: "+
+				recipe.getInstructions() + " Prep Time: "+ recipe.getPreTime()+" Cooking Time: "+ recipe.getCookTime()+ 
+				" Serving Size: "+ recipe.getServings() + super.toString() ;
+	}
+
+//	@Override
+//	public String toString() {
+//		return  "Dish: "+ recipe.getRecipeName()+ " \nIngredents: "+ Arrays.toString(getIngredientsList())+ "\nDirection: "+
+//				recipe.getInstructions() + " Prep Time: "+ recipe.getPreTime()+" Cooking Time: "+ recipe.getCookTime()+ 
+//				" Serving Size: "+ recipe.getServings() + super.toString() ;
+//	}
+
+  public String printIngredents(String [] s) {
+	  String res ="";
+	  for(String resu: s) {
+		  res += resu +"\n";
+	  }
+	  return res;
+
+  }
+	
 
 	
 }

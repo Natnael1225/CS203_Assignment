@@ -6,6 +6,6 @@ public interface CookingVideos {
 	
 	public Recipe getCookingRecipe();
 	
-	public void printRecipe();
+	public String printRecipe();
 
 }

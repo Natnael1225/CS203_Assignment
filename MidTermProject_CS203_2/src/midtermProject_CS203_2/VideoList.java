@@ -12,12 +12,8 @@ public class VideoList {
 		this.videos = new Video[10];
 		this.size = 0;
 	}
-	public VideoList(Video[] videos, int size) {
-		this.videos = videos;
-		this.size = size;	
-		}
-	
-    public void add(Video input) {
+
+	public void add(Video input) {
     	videos[size] = input;
     	size++;
     	if(size == videos.length) resize();
@@ -34,25 +30,19 @@ public class VideoList {
     	}
     	      revideo= videos;
     }
+    public Video get(int index) {
+    	return videos[index];
+    }
 
     @Override
 	public String toString() {
     	String res ="";
     	for( int i=0;i< videos.length;i++) {
-    		res += videos[size];
+    		res += videos[i];
     	}
 		//return "Videos: " + Arrays.toString(videos) + " Size:" + size ;
 		return res + " Size:" + size ;
 	}
-//    @Override
-//    public String toString() {
-//        StringBuilder result = new StringBuilder();
-//        for (int i = 0; i <= size; i++) {
-//            result.append(videos.toString() + "\n");
-//        }
-//
-//        return result.toString();
-//    }
     
 }
 
