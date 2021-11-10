@@ -30,9 +30,9 @@ public class VideoList {
     	}
     	      revideo= videos;
     }
-    public Video get(int index) {
-    	return videos[index];
-    }
+//    public Video get(int index) {
+//    	return videos[index];
+//    }
 
     @Override
 	public String toString() {
@@ -41,8 +41,10 @@ public class VideoList {
     		res += videos[i];
     	}
 		//return "Videos: " + Arrays.toString(videos) + " Size:" + size ;
-		return res + " Size:" + size ;
+		return res + "\nSize:" + size ;
 	}
+
+	
     
 }
 

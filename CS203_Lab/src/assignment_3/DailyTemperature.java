@@ -12,7 +12,7 @@ public class DailyTemperature {
 	public static int[] HotCold() {
 		
 		Scanner input = new Scanner(System.in);
-		int [] temp = new int[3];
+		int [] temp = new int[365];
 		
 		 for(int i=0;i< temp.length; i++) {
 			 System.out.println("Enter the temperature for the day: "+ (i+1));

@@ -1,5 +1,7 @@
 package assignment_3;
 
+import java.util.Arrays;
+
 public class FindSmallest_Largest {
 	// TO find the smallest and largest element
 	
@@ -23,6 +25,10 @@ public class FindSmallest_Largest {
 	
 public static void main(String[] args) {
 	int[] arr = {1,4,-9,33,19,78,5};
+	Arrays.sort(arr);
+	System.out.println(arr[0]);
+	System.out.println(arr[arr.length-1]);
+	
 	int[] answer = MaxMin(arr);
 	
 	for(int i=0;i<answer.length;i++) {

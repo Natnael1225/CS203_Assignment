@@ -14,7 +14,7 @@ public class Recipe  implements Cloneable{
 
 		this.recipeName = "Pecan Pie";
 		this.ingredents =  "Pecan , Flour, Water";
-		this.instructions = " Pour Water on the top of the flour. Mix throughly. Add Pecans. Bake for 30 min.";
+		this.instructions = "Pour Water on the top of the flour. Mix throughly. Add Pecans. Bake for 30 min.";
 		this.preTime = 15; 
 		this.cookTime = 30;
 		this.servings = 4;

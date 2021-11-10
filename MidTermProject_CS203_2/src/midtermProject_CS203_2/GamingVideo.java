@@ -35,7 +35,7 @@ public class GamingVideo extends Video implements GamingVideos {
 
 	@Override
 	public String toString() {
-		return  super.toString()+ " "+"GameName: " + name ;
+		return"\nGameName: " +name + " "+ super.toString() ;
 	}
 	
 	

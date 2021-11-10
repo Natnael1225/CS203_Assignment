@@ -40,7 +40,7 @@ public class CookingVideo  extends Video implements  CookingVideos{
 
 	@Override
 	public String printRecipe() {  // Check with this implemention may be get address or for loop
-		return "Dish: "+ recipe.getRecipeName()+ " \nIngredents: "+ Arrays.toString(getIngredientsList())+ "\nDirection: "+
+		return "Dish: "+ recipe.getRecipeName()+ " \nIngredents: "+ printIngredients(getIngredientsList())+ "\nDirection: "+
 	recipe.getInstructions() + " Prep Time: "+ recipe.getPreTime()+" Cooking Time: "+ recipe.getCookTime()+ 
 	" Serving Size: "+ recipe.getServings();
 		
@@ -48,24 +48,17 @@ public class CookingVideo  extends Video implements  CookingVideos{
 	}
 	@Override
 	public String toString() {
-		return  "Dish: "+ recipe.getRecipeName()+ " \nIngredents:"+ printIngredents(getIngredientsList())+ "Direction: "+
-				recipe.getInstructions() + " Prep Time: "+ recipe.getPreTime()+" Cooking Time: "+ recipe.getCookTime()+ 
-				" Serving Size: "+ recipe.getServings() + super.toString() ;
+		return  "\nDish: "+ recipe.getRecipeName()+ " \nIngredents:"+ printIngredients(getIngredientsList())+ "Direction: "+
+				recipe.getInstructions() + "\nPrep Time: "+ recipe.getPreTime()+"\nCooking Time: "+ recipe.getCookTime()+ 
+				"\nServing Size: "+ recipe.getServings() + super.toString() ;
 	}
 
-//	@Override
-//	public String toString() {
-//		return  "Dish: "+ recipe.getRecipeName()+ " \nIngredents: "+ Arrays.toString(getIngredientsList())+ "\nDirection: "+
-//				recipe.getInstructions() + " Prep Time: "+ recipe.getPreTime()+" Cooking Time: "+ recipe.getCookTime()+ 
-//				" Serving Size: "+ recipe.getServings() + super.toString() ;
-//	}
-
-  public String printIngredents(String [] s) {
-	  String res ="";
+  public String printIngredients(String [] s) {
+	  String answer ="";
 	  for(String resu: s) {
-		  res += resu +"\n";
+		  answer += resu +"\n";
 	  }
-	  return res;
+	  return answer;
 
   }
 	

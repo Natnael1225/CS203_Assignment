@@ -1,6 +1,6 @@
 package midtermProject_CS203_2;
 
-public class Video implements Comparable<Video>{
+public abstract class Video implements Comparable<Video>{
 
 	
 	private String title;
@@ -82,8 +82,8 @@ public boolean equals(Object obj) {
 
 @Override
 public String toString() {
-	return "Title:" + title + ". DurationInMinutes: " + durationInMinutes + ". Views: " + views + ". Likes: "
-			+ likes + ". WatchTime: " + watchTime ;
+	return "\nTitle:" + title + "\nDurationInMinutes: " + durationInMinutes + "\nViews: " + views + "\nLikes: "
+			+ likes + "\nWatchTime: " + watchTime ;
 }
 
 

@@ -13,7 +13,7 @@ public class AssetTester {
 
 		Assets  asset1 = new Assets(1254,"Electronic appliances",20 );
 		
-		Assets  asset2 = new Assets(2563,"Automobiles",50 );
+		Assets  asset2 = new Assets(2563,"Automobileslopki",50 );
 		Assets  asset3 = new Assets(5864,"Furniture",56 );
 		Assets  asset4 = new Assets(6935,"Compact disks",89 );
 		Assets  asset5 = new Assets(6935,"Laptop ",89 );
@@ -42,12 +42,13 @@ public class AssetTester {
 		System.out.println( ap.searchSerialNumber(2563));
 		System.out.println( ap.searchSerialNumber(5283));
 		
-		ap.searchBySerialNumber(2569);
+		ap.searchBySerialNumber(1254);
+		System.out.println( );
 		
 		ap.deleteAsset(asset4);
-		System.out.println(ap.toString());
+		//System.out.println(ap.toString());
 		
-		ap.setAsset(0,asset5);
+		ap.setAsset(asset2);
 		System.out.println(ap.toString());
 		
 //		for(Assets  answer: list ) {

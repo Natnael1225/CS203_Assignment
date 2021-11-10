@@ -13,9 +13,9 @@ public class AssetTrackingProgram {
 		assets.add(asset);
 	}
 	
-	public void setAsset(int serialnumber, Assets asset) {
+	public void setAsset( Assets asset) {
 		
-		assets.set( serialnumber, asset);
+		assets.set(assets.indexOf(asset),asset);
 	}
 	
   public void deleteAsset(Assets asset) {
@@ -42,7 +42,7 @@ public class AssetTrackingProgram {
       if( result  == null)
           System.out.println("No asset found with the given serial number");
       else
-          System.out.println( result );
+          System.out.println( "Found "+result);
   
   }
 

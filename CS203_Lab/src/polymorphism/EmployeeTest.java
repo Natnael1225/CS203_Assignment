@@ -20,7 +20,7 @@ public class EmployeeTest {
 	  System.out.println("Checks equality by postion: "+clerk.getPosition() .equals(clerk3.getPosition()));
 	  clerk.printEmployeeDetails();
 	  System.out.println("After add the bouns: $"+clerk.addBonus());
-	  System.out.println("Checks equality by postion: "+clerk2.getPosition().equals(clerk3.getPosition() ));
+	  System.out.println("Checks equality by postion: "+clerk2.getPosition().equals(clerk3.getPosition()));
 	  
 	 
   }
